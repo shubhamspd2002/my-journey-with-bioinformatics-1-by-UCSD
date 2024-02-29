@@ -1,0 +1,233 @@
+lecture 1 (20.11.2023)
+
+download and learn how to use bioconductor
+My SQL : foe accessing and storing data
+MongoDB : cloud computing of big data
+web development : HTML, CSS, Javascript
+Data visualization : Matplotlib (in python), ggplot2(in R) to create high quality graph plots
+
+lecture 3: (22.11.2023)
+python is a scripting language
+jupyter is command line editor
+
+packages are inbuilt pipelines available. eg NumPy (numerical data analysis using python)
+matplotlib (for visualization)
+
+lecture 5 (23.11.2023)
+
+w3school : tutorial for numpy and matplotlib
+
+import matplotlib.pyplot as plt means call matplotlib as plt
+
+open numpy and matplotlib using w3school and try and use all the python tutorials in jupyter (open jupyter using anaconda). Make sure u import numpy and matplotlib. this import means #include i.e including the libraries. All of this u have to do in jupyter lab
+
+
+seaborn is a statistical data visualisation library for python which can be used in matplotlib
+type pip install (name of library), search and then copy the pip install (name of library) and paste in jupyter lab
+
+go to seaborn and then three lines on top left and select gallery to get all the types of graph. 
+'import seaborn as sns' to include the library in jup lab.
+
+hue = legends
+pallete = to assign colours eg: palette=["m", "g"]
+
+try copy and pasting code for heatmap in jup lab.
+search breast cancer data visualization using python in google and go for kaggle website. U can also find this on github
+
+df.shape = give me the total count of my data (400, 16) 16 means coloumns
+df.describe() = analyses the data
+df.info = gives information on the data whether it has int char etc.
+
+kaggle is a good website to get data for plotting graphs. 
+
+#To import the Iris dataset:
+iris = pd.read_csv("../input/Iris.csv") # the iris dataset is now a Pandas DataFrame
+
+#To view Iris data below:
+iris.head()
+
+instead of ../input/Iris.csv u have to download the data set and then copy the path file from properties and paste it there. then execute the program. for eg
+
+df = pd.read_csv("C:\Users\LENOVO\Desktop\Anaconda files\breast cancer.csv")
+df.head()
+
+#this will give an error cause python treats \ as a char in the above address. by default the addresses of files have \. to solve this either add one more \ to all \, or replace all \ with /, or just add r before the " like 
+ 
+df = pd.read_csv(r"C:\Users\LENOVO\Desktop\Anaconda files\breast cancer.csv")
+then u can run without any errors
+df = data frame
+df.head(10)( 10 means display only 10 coloumns of the downloaded data whose path is included in the program.)
+df.shape means it will give u how many (roes,columns) are there in ur data
+df.describe (describes the data)
+df.info (gives information about the data)
+
+in kaggle when u copy and use different functions like
+iris.plot(kind="scatter", x="SepalLengthCm", y="SepalWidthCm")
+plt.show()
+
+in above, according to your data, replace x and y terms above with the coloumns of the data. Also make sure that if u want to plot graph of the data that u have, select the coloumns that have numbers and not characters or strings and paste it in x and y in the function that is copied.
+
+to get data visualization using matplotlib, u can write plt.default(x, y) if u dont know which type of graph to choose. Or else u can use plt.pychart(x, y), plt.scatter(x, y) etc
+
+
+Day 6: sequence allignment
+
+plotly python library will help u present data in an animated manner. it makes interactive graphs
+install plotly library by typing pip install on google, copy and paste in notebook
+in plotly, go to basic charts and see how different plots have been made by programming
+
+in the plotly site in the example graph just above the graph on cursor stimulation u can see different tools to see the graph
+
+for the plot of sepal and petal in plotly, do the following:
+search iris csv on google, u will get github link, in that u wil get the data for sepal and petal length of 3 species. our aim is to find out which species has better length. Click on download zip. Save it in an independent folder cause u need the path (u can also perform ML on this)
+in plotly on LHS there is a blsck section where u can see different example graphs. 
+to plot a 3D graph, use import plotly.graph_objects as go (already there in example sets)
+
+check this video out: https://www.youtube.com/watch?v=a9UrKTVEeZA
+
+if u are planning to work on big data, u can use google colab. it is free. learn to use google colab. 
+
+Day 7: GC content
+
+visit biopython website, explore and learn.
+in PROSITE protein motif information is stored
+>>>import bio 
+this is a partent package under which there are child packages. To call the child package called Seq, we write
+>>>from Bio.Seq import Seq 
+
+learn how to integrate biopython compiler in VS
+
+from Bio.Alphabet import generic_protein 
+this means whatever the seq u have written, convert it to protein seq
+rec.format("fasta")
+this will conert protein sequence to fasta format
+
+the best link to learn more about biopython is tutorialspoint biopython
+
+xplore expasy which is a database like NCBI
+try biopython in google colab
+
+Day 8: Transcription and Translation
+
+on google colab, try and use the codes from the tutorialspoint for biopython
+add = concatenation
+
+the statements from Bio.Seq import yyyy are very important. It can give u errors if u dont import the required child package from the parent package 
+
+to clear all the basics of biopython, check this link out
+https://github.com/enesbasbug/Bioinformatics-with-Biopython/blob/master/Bioinformatics_with_Biopython.ipynb
+
+
+steps to upload the entire program from github to colab:
+1. go to github and search for the program u want to upload on colab
+1. In google colab, click file, click open notebook, after opening u will see the github section
+3. copy paste the github link in colab
+
+https://github.com/biopython/biopython 
+this is the github link for learning the biopython programs
+
+the problem with google colab is that whenever u open a new notebook, u need to pip install the files again
+
+check this out
+https://github.com/PacktPublishing/Bioinformatics-with-Python-Cookbook-Second-Edition/blob/master/Datasets.ipynb
+
+https://github.com/enesbasbug/Bioinformatics-App-with-Streamlit
+
+!pip install py3Dmol
+this is to produce 3D models 
+
+DAY 9: MOTIF SEARCH IN SEQUENCES
+
+learn to use PDB
+to create drugs models in computer, use
+!pip install RDKit
+which is a package for chemoinformatics and ML
+
+simplified molecular input line entry system = smiles
+
+DAY 10: CALCULATING MOLECULAR WEIGHT OF PROTEINS
+
+if u run dir(Bio) in google colab after !pip install Biopython, you will get all the packages availabe in Biopython
+
+to load a fasta file:
+seq_file_read = SeqIO.read('sequence.fasta', 'fasta')
+seq_file_read
+
+instead of sequence.fasta u put the fasta file
+check the following commands out:
+
+#type
+type(seq_file_read)
+
+#list of sequence details
+seq_file_read .id
+
+#get sequence
+seqfromfile = seq_file_read.seq
+seqfromfile
+ 
+#list sequence details
+for record in SeqIO.parse('sequence.fasta', 'fasta'):
+print(record)
+
+#store seq for later analysis
+seqfromfile = record.seq
+seqfromfile
+
+#length of sequence
+len(seqfromfile)
+
+check these links out: 
+https://biomedical.dev6.rightinformation.com/genomic-analysis
+https://plotly.com/examples/
+
+DAY 11: 
+all slides
+
+DAY 12: AMINO ACID COMPOSITION ANALYSIS
+R bioconductor is an open source for bioinformatics for sequence analysis, functional analysis, interaction networks, systems biology analysis
+CADD, omics approach etc
+learn R from w3schools and github
+R has been downloaded in the pc. In R in top section in packages there are different packages available. You can click and install them
+also you can update the packages manually
+
+first you have to install R then you can install Rstudio
+downolad R from cran 
+download Rstudio from posit
+
+R studio is like an IDE just like VS code. to install packages in R, click tools and click install packages. in the second box, type the
+name of the package u want to install. so it will install from cran and put it in R studio
+
+in R studio
+ctrl + shift + n = new file
+# means comment
+
+in top right there is tutorials section for any tutorials for R
+in bottom right section in packages if you type your package name in the search box, and click on the package, you will get all the information regarding that package 
+
+DAY 12: amino acid composition analysis
+all the content is in the R file.
+
+DAY 13:
+you can learn r fron w3s school or tutorialspoint
+
+DAY 14:
+search EDA (exploratory data analysis)
+following link shows how to install bioconductor in R
+https://www.bioconductor.org/install/ 
+
+visit this link to learn more abt R
+https://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter1.html
+in the above link, to know more about the package, copy paste the name of the package in bioconductor search box or u can search in google
+
+learn about BLOSUM50 AND The Needleman-Wunsch algorithm 
+
+DAY 15
+search metagenomics analysis by Rpubs
+also search metagenomics language:R in github
+learn molecular docking
+
+visit shiny for R which is for web development
+streamlit (for python and R) search on google
+
+visit this research paper: https://www.mdpi.com/2075-1729/12/5/648

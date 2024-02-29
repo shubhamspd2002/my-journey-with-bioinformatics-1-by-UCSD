@@ -1,0 +1,14 @@
+"""
+atcaatgatcaacgtaagcttctaagcatgatcaaggtgctcacacagtttatccacaac
+ctgagtggatgacatcaagataggtcgttgtatctccttcctctcgtactctcatgacca
+cggaaagatgatcaagagaggatgatttcttggccatatcgcaatgaatacttgtgactt
+gtgcttccaattgacatcttcagcgccatattgcgctggccaaggtgacggagcgggatt
+acgaaagcatgatcatggctgttgttctgtttatcttgttttgactgagacttgttagga
+tagacggtttttcatcactgactagccaaagccttactctgcctgacatcgaccgtaaat
+tgataatgaatttacatgcttccgcgacgatttacctcttgatcatcgatccgattgaag
+atcttcaattgttaattctcttgcctcgactcatagccatgatgagctcttgatcatgtt
+tccttaaccctctattttttacggaagaatgatcaagctgctgctcttgatcatcgtttc
+
+this is the genetic code for vibro cholerae
+for k from 3 4 5 6 7 8 9, find their frequency and also mention their k-mers (like TGA, TGCA etc) 
+"""
